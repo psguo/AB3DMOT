@@ -5,7 +5,9 @@ import numpy as np
 # from sklearn.utils.linear_assignment_ import linear_assignment    # deprecated
 from scipy.optimize import linear_sum_assignment
 from AB3DMOT_libs.bbox_utils import convert_3dbox_to_8corner, iou3d
-from AB3DMOT_libs.kalman_filter import KalmanBoxTracker
+from AB3DMOT_libs.kalman_filter_const_vel import KalmanBoxTracker
+# from AB3DMOT_libs.kalman_filter_const_acc import KalmanBoxTracker
+# from AB3DMOT_libs.unscented_kalman_filter import KalmanBoxTracker
 
 def associate_detections_to_trackers(detections, trackers, iou_threshold=0.01):   
 	"""
